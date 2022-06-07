@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+:root {
+    /* Primary */
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+
+    /* Neutral */
+    --Grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    background: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    background: var(--dark-grayish-blue);
+    max-width: 550px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px rgb(0, 0, 0, 0.25);
+}
+
+main .advice {
+    color: var(--neon-green);
+    font-size: 0.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+main .quote {
+    color: var(--light-cyan);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+main .separator-desktop {
+    margin-bottom: 10px;
+}
+main .separator-mobile {
+    display: none;
+}
+
+main .btn-new-quote {
+    background: var(--neon-green);
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -30px;
+    border-radius: 50%;
+}
+
+main .btn-new-quote:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px var(--neon-green);
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0 20px;
+    }
+    main {
+        max-width: 100%;
+        padding: 50px 25px;
+    }
+    main .separator-desktop {
+        display: none;
+    }
+    main .separator-mobile {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
